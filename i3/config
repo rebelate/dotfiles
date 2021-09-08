@@ -255,7 +255,7 @@ bindsym $mod+y exec "bash /home/arsil/.config/mpv/scripts/yt.sh"
 exec_always feh --bg-fill ~/Pictures/Wallpapers/luca-bravo-O453M2Liufs-unsplash.jpg
 
 # i3Lock key-map
-bindsym $mod+x exec betterlockscreen -u /home/arsil/Pictures/Wallpapers/wallpapersden.com_aurora-borealis-mountain-reflection_2048x1599.jpg -l blur
+bindsym $mod+x exec scrot -o /tmp/lockscreen.jpg -e 'betterlockscreen -u $f -l blur'
 
 # Compositor
 # exec_always picom -f

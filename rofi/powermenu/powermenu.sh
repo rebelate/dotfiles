@@ -28,8 +28,19 @@ logout=""
 
 # Variable passed to rofi
 options="$shutdown\n$reboot\n$lock\n$suspend\n$logout"
-
+lockscreen="/tmp/lockscreen.jpg"
+lastModificationSeconds=$(($(date +%s) - $(date +%s -r $lockscreen)))
+condition=$(( $lastModificationSeconds <= 900 ? 1 : 0))
 chosen="$(echo -e "$options" | $rofi_command -p "Uptime: $uptime" -dmenu -selected-row 2)"
+
+lock(){
+if [[ -f /usr/local/bin/betterlockscreen && $condition == 1 ]]; then
+			betterlockscreen -u /tmp/lockscreen.jpg -l blur
+		  else
+			scrot -o /tmp/lockscreen.jpg -e 'betterlockscreen -u $f -l blur'			
+		fi
+}
+
 case $chosen in
     $shutdown)
 		# ans=$(confirm_exit &)
@@ -54,18 +65,15 @@ case $chosen in
         fi
         ;;
     $lock)
-		if [[ -f /usr/bin/betterlockscreen ]]; then
-			betterlockscreen -l
-		elif [[ -f /usr/bin/i3lock ]]; then
-			i3lock
-		fi
-        ;;
+		lock
+		;;
     $suspend)
 		# ans=$(confirm_exit &)
 		ans="yes"
 		if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
-			mpc -q pause
-			amixer set Master mute
+		    # mpc -q pause
+			# amixer set Master mute
+			lock
 			systemctl suspend
 		elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
 			exit 0

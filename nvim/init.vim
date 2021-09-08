@@ -338,8 +338,8 @@ Plug 'chrisbra/Colorizer'
 	nmap <leader>c :bd<cr>
 
     " remap esc
-    inoremap kj <esc>
-	cnoremap kj <C-c>
+    inoremap jk <esc>
+	cnoremap jk <C-c>
 
     " shortcut to save
     nmap <leader>, :w<cr>
