@@ -196,6 +196,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 #Assign programs to workspaces use xprop for class name
+for_window [class="jetbrains-idea-ce"] move to workspace $ws3
 for_window [class="Firefox"] move to workspace $ws2
 for_window [class="zoom"] floating enable
 for_window [class="Blender"] floating enable
@@ -255,7 +256,7 @@ bindsym $mod+y exec "bash /home/arsil/.config/mpv/scripts/yt.sh"
 exec_always feh --bg-fill ~/Pictures/Wallpapers/luca-bravo-O453M2Liufs-unsplash.jpg
 
 # i3Lock key-map
-bindsym $mod+x exec scrot -o /tmp/lockscreen.jpg -e 'betterlockscreen -u $f -l blur'
+bindsym $mod+x exec "source $HOME/.config/i3/lock.sh;lock"
 
 # Compositor
 # exec_always picom -f
