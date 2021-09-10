@@ -72,6 +72,9 @@ Plug 'mhinz/vim-startify'
 Plug 'chrisbra/Colorizer'
 
 " General {{{
+	" Map Capslock when nvim started and reset on closing 
+	:silent !setxkbmap -option caps:swapescape
+	:silent au VimLeave * !setxkbmap -option
     " Abbreviations
     abbr funciton function
     abbr teh the
@@ -339,7 +342,7 @@ Plug 'chrisbra/Colorizer'
 
     " remap esc
     inoremap jk <esc>
-	cnoremap jk <C-c>
+	" cnoremap jk <C-c>
 
     " shortcut to save
     nmap <leader>, :w<cr>
