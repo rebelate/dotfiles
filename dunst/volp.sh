@@ -5,9 +5,11 @@
 # $./volume.sh down
 # $./volume.sh mute
 
-SINK=$(pactl list short | grep RUNNING | sed -e 's,^\([0-9][0-9]*\)[^0-9].*,\1,')
+sink=$(pactl list short | grep RUNNING | sed -e 's,^\([0-9][0-9]*\)[^0-9].*,\1,')
+def_sink=$(pactl list short|grep alsa_output.pci-0000_00_1f.3.analog-stereo|head -n 1|awk '{print $1}')
+cur_sink=$([ -n "$sink" ] && echo "$sink" || echo "$def_sink")
 function get_volume {
-  pactl list sinks | grep -A 15 -E "^Sink #$SINK\$" | grep 'Volume:' | grep -E -v 'Base Volume:' | awk -F : '{print $3; exit}' | grep -o -P '.{0,3}%' | sed 's/.$//' | tr -d ' '
+  pactl list sinks | grep -A 15 -E "^Sink #$cur_sink\$" | grep 'Volume:' | grep -E -v 'Base Volume:' | awk -F : '{print $3; exit}' | grep -o -P '.{0,3}%' | sed 's/.$//' | tr -d ' '
 }
 volume=`get_volume`
 volume_step=6
@@ -55,16 +57,16 @@ case $1 in
 	# Up the volume (+ 5%)
 	echo "$volume"
 	if [ "$volume" -le "100" ] && [ "$volume" -ge "$volume_limit" ]; then
-	  pactl set-sink-volume "$SINK" "100%"
+	  pactl set-sink-volume "$cur_sink" "100%"
     elif [ "$volume" -lt $volume_limit ]; then
-        pactl set-sink-volume "$SINK" "+$volume_step%"
+        pactl set-sink-volume "$cur_sink" "+$volume_step%"
     fi
 
 	send_notification
 	;;
     down)
 	amixer set Master on > /dev/null
-	pactl set-sink-volume "$SINK" "-$volume_step%"
+	pactl set-sink-volume "$cur_sink" "-$volume_step%"
 	send_notification
 	;;
     mute)
