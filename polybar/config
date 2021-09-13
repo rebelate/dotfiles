@@ -379,11 +379,11 @@ format-muted-background = ${colors.shade1}
 format-volume-padding = 1
 label-volume = %percentage%
 label-volume-foreground = ${root.foreground}
-interval = 5
+interval = 2
 label-muted = %{T3}%{T-}
 label-muted-foreground = #666
 
-ramp-volume-0 = %{T3}%{T-}
+ramp-volume-0 = %{T3}%{T-}
 ramp-volume-1 = %{T3}%{T-}
 ramp-volume-2 = %{T3}%{T-}
 

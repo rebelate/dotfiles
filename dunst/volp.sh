@@ -5,17 +5,21 @@
 # $./volume.sh down
 # $./volume.sh mute
 
+SINK=$(pactl list short | grep RUNNING | sed -e 's,^\([0-9][0-9]*\)[^0-9].*,\1,')
 function get_volume {
-    amixer get Master | grep '%' | head -n 1 | cut -d '[' -f 2 | cut -d '%' -f 1
+  pactl list sinks | grep -A 15 -E "^Sink #$SINK\$" | grep 'Volume:' | grep -E -v 'Base Volume:' | awk -F : '{print $3; exit}' | grep -o -P '.{0,3}%' | sed 's/.$//' | tr -d ' '
 }
+volume=`get_volume`
+volume_step=6
+volume_limit=$((100 - $volume_step))
 
 function is_mute {
     amixer -D pulse get Master | grep '%' | grep -oE '[^ ]+$' | grep off > /dev/null
 }
 
 function send_notification {
+	volume=`get_volume`
     DIR=`dirname "$0"`
-    volume=`get_volume`
     # Make the bar with the special character ─ (it's not dash -)
     # https://en.wikipedia.org/wiki/Box-drawing_character
 #bar=$(seq -s "─" $(($volume/5)) | sed 's/[0-9]//g')
@@ -49,12 +53,18 @@ case $1 in
 	# Set the volume on (if it was muted)
 	amixer set Master on > /dev/null
 	# Up the volume (+ 5%)
-	amixer sset Master 200+ > /dev/null
+	echo "$volume"
+	if [ "$volume" -le "100" ] && [ "$volume" -ge "$volume_limit" ]; then
+	  pactl set-sink-volume "$SINK" "100%"
+    elif [ "$volume" -lt $volume_limit ]; then
+        pactl set-sink-volume "$SINK" "+$volume_step%"
+    fi
+
 	send_notification
 	;;
     down)
 	amixer set Master on > /dev/null
-	amixer sset Master 200- > /dev/null
+	pactl set-sink-volume "$SINK" "-$volume_step%"
 	send_notification
 	;;
     mute)
