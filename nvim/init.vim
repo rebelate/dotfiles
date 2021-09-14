@@ -70,6 +70,7 @@ Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'mhinz/vim-startify'
 Plug 'chrisbra/Colorizer'
+Plug 'andweeb/presence.nvim'
 
 " General {{{
 	" Map Capslock when nvim started and reset on closing 
@@ -489,6 +490,5 @@ Plug 'chrisbra/Colorizer'
     let g:airline_symbols.linenr = ''
 
 " }}}
-
 
 	:lua require('config')
