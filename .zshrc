@@ -88,8 +88,6 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export PATH="$HOME/.npm/bin:$PATH"
-export FLYCTL_INSTALL="/home/arsil/.fly"
-export PATH="$FLYCTL_INSTALL/bin:$PATH"
 export PATH="/opt/ffmpeg_build/bin:$PATH"
 export LS_COLORS="$LS_COLORS:ow=1;35;107:tw=1;34:"
 
