@@ -76,8 +76,8 @@ Plug 'andweeb/presence.nvim'
 
 " General {{{
 	" Map Capslock when nvim started and reset on closing 
-	:silent !setxkbmap -option caps:swapescape
-	:silent au VimLeave * !setxkbmap -option
+	" :silent !setxkbmap -option caps:swapescape
+	" :silent au VimLeave * !setxkbmap -option
     " Abbreviations
     abbr funciton function
     abbr teh the
