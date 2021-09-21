@@ -215,7 +215,7 @@ for_window [class="Code"] move to workspace $ws3
 for_window [class="Blender"] move to workspace $ws3
 
 bindsym $mod+Shift+w exec firefox ; workspace $ws2
-bindsym $mod+c exec idea ; workspace $ws3
+bindsym $mod+c exec code ; workspace $ws3
 bindsym $mod+Shift+s exec spotify ; workspace $ws5
 bindsym $mod+e exec nautilus ; workspace $ws4 
 
