@@ -201,7 +201,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 #Assign programs to workspaces use xprop for class name
 for_window [class="jetbrains-idea-ce"] move to workspace $ws3
-for_window [class="Navigator"] move to workspace $ws2
+for_window [class="Firefox"] move to workspace $ws2
 for_window [class="zoom"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Blender"] floating enable
