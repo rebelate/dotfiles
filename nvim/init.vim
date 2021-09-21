@@ -88,7 +88,7 @@ Plug 'andweeb/presence.nvim'
     abbr attribuet attribute
 
     set autoread " detect when a file is changed
-	autocmd BufEnter * silent! lcd %:p:h
+	" autocmd BufEnter * silent! lcd %:p:h
     " WARNING: These settings disable vim's backups (swap files).
     " If this is not desired, comment these lines out.
     set nobackup " don't use backup files
