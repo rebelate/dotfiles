@@ -137,7 +137,7 @@ content-padding = 2
 type = custom/script
 interval = 1
 format-prefix = " "
-format =  %{T6} <label>%{T-}
+format = %{T2}%{T-} %{T6} <label>%{T-}
 exec = python ~/.config/polybar/scripts/spotify.py -f '{song}'
 format-underline = ${colors.shade2}
 ;control players (optional)
@@ -359,8 +359,8 @@ interval = 5
 date ="%{T2}%{T-} %a,%e "
 date-alt = "%{T2}%{T-} %e %b %Y "
 
-time = "%{T2}%{T-} %I:%M %p"
-time-alt = "%{T2}%{T-} %I:%M:%S %p"
+time = "%{T4}%{T-} %I:%M %p"
+time-alt = "%{T4}%{T-} %I:%M:%S %p"
 
 format-prefix = 
 format-padding = 1
