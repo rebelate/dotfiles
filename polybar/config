@@ -17,19 +17,21 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-;background = #2e3440
-background = #7a2e3440
+background = ${xrdb:color0:#222}
+; background = #7a2e3440
 background-alt = #00000000
-;foreground = ${xrdb:color7:#222}
+; foreground = ${xrdb:color7:#222}
 foreground = #eceff4
 foreground-alt = #eceff4
 primary = #5E81AC
 secondary = #e60053
 alert = #bd2c40
-shade1 = #DDA96A
-shade2 = #009999
-shade3 = #81A9BB 
+; shade1 = #DDA96A
+; shade2 = #009999
+; shade3 = #81A9BB 
+shade1 = ${xrdb:color1:#222}
+shade2 = ${xrdb:color6:#222}
+shade3 = ${xrdb:color7:#222}
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}

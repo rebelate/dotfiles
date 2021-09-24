@@ -258,7 +258,8 @@ bindsym $mod+m mode "resize"
 bindsym $mod+y exec "bash /home/arsil/.config/mpv/scripts/yt.sh"
 
 # Wallpaper
-exec_always feh --bg-fill ~/Pictures/Wallpapers/luca-bravo-O453M2Liufs-unsplash.jpg
+# exec_always feh --bg-fill ~/Pictures/Wallpapers/luca-bravo-O453M2Liufs-unsplash.jpg
+exec wal -i Pictures/Wallpapers/wallhaven-3z3v6y.jpg --saturate .5 -s
 
 # i3Lock key-map
 bindsym $mod+x exec --no-startup-id "source $HOME/.config/i3/lock.sh;lock"
