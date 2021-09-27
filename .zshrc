@@ -10,6 +10,8 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/arsil/.oh-my-zsh"
+# Fix no match when using wildcard *
+unsetopt no_match
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -60,7 +62,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
-
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # You can set one of the optional three formats:
