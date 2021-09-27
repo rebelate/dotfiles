@@ -1,4 +1,5 @@
 ![cover](./images/screenshot.png)
+![cover2](./images/screenshot2.png)
 
 # Arsil's dotfiles
 
