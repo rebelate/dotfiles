@@ -1,5 +1,5 @@
-[![cover](./images/screenshot.png)](./wallpaper/Wallpaper-015.jpg)
-[![cover2](./images/screenshot1.png)](./wallpaper/Wallpaper-019.jpg)
+[![cover](./images/screenshot.png)](https://github.com/rebelate/wallpaper/blob/main/Wallpaper-015.jpg)
+[![cover2](./images/screenshot1.png)](https://github.com/rebelate/wallpaper/blob/main/Wallpaper-019.jpg)
 
 ##### \* Click to see the wallpaper
 
