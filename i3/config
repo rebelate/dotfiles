@@ -208,7 +208,7 @@ for_window [class="Blender"] floating enable
 for_window [class="Unity"] floating enable
 for_window [class="xpad"] floating enable
 
-exec --no-startup-id xpad
+# exec --no-startup-id xpad
 exec --no-startup-id pulseeffects
 for_window [class="Pulseeffects"] move to workspace $ws5
 for_window [class="Spotify"] move to workspace $ws5
