@@ -29,9 +29,9 @@ alert = #bd2c40
 ; shade1 = #DDA96A
 ; shade2 = #009999
 ; shade3 = #81A9BB 
-shade1 = ${xrdb:color1:#222}
-shade2 = ${xrdb:color6:#222}
-shade3 = ${xrdb:color8:#222}
+shade1 = ${xrdb:color7:#222}
+shade2 = ${xrdb:color4:#222}
+shade3 = ${xrdb:color1:#222}
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}

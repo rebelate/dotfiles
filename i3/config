@@ -206,6 +206,9 @@ for_window [class="zoom"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Blender"] floating enable
 for_window [class="Unity"] floating enable
+for_window [class="xpad"] floating enable
+
+exec --no-startup-id xpad
 exec --no-startup-id pulseeffects
 for_window [class="Pulseeffects"] move to workspace $ws5
 for_window [class="Spotify"] move to workspace $ws5
@@ -259,7 +262,7 @@ bindsym $mod+y exec "bash /home/arsil/.config/mpv/scripts/yt.sh"
 
 # Wallpaper
 # exec_always feh --bg-fill ~/Pictures/Wallpapers/luca-bravo-O453M2Liufs-unsplash.jpg
-exec wal -i Pictures/Wallpapers/wallhaven-3z3v6y.jpg --saturate .5 -s
+exec wal -i Pictures/Wallpapers/astronaut-anomaly-celestial-black-hole-asteroids-5k-4480x2520-3436.jpg --saturate .5 -s
 
 # i3Lock key-map
 bindsym $mod+x exec --no-startup-id "source $HOME/.config/i3/lock.sh;lock"
