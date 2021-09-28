@@ -262,7 +262,7 @@ bindsym $mod+y exec "bash /home/arsil/.config/mpv/scripts/yt.sh"
 
 # Wallpaper
 # exec_always feh --bg-fill ~/Pictures/Wallpapers/luca-bravo-O453M2Liufs-unsplash.jpg
-exec wal -i Pictures/Wallpapers/astronaut-anomaly-celestial-black-hole-asteroids-5k-4480x2520-3436.jpg --saturate .5 -s
+exec wal -i Pictures/Wallpapers/Wallpaper-019.jpg --saturate .7 -s
 
 # i3Lock key-map
 bindsym $mod+x exec --no-startup-id "source $HOME/.config/i3/lock.sh;lock"
