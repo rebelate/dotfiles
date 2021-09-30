@@ -471,7 +471,8 @@ animation-charging-framerate = 750
 [module/temperature]
 type = internal/temperature
 format-background = ${colors.shade1}
-format-padding = 1
+format-warn-background = ${colors.shade1}
+; format-padding = 1
 thermal-zone = 0
 warn-temperature = 60
 interval = 3
@@ -480,9 +481,9 @@ interval = 3
 ;format-warn = <ramp> <label-warn>
 ;format-warn-underline = ${self.format-underline}
 
-label = "%{T2}﬙%{T-} %temperature-c%"
-;label-warn = %temperature-c%
-;label-warn-foreground = ${colors.secondary}
+label = " %{T2}﬙%{T-} %temperature-c% "
+label-warn = ${self.label}
+label-warn-foreground = ${colors.secondary}
 
 ;ramp-0 = 
 ;ramp-1 = 
