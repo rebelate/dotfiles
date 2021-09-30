@@ -206,7 +206,7 @@ ws-icon-5 = 6;%{T3}ﭮ%{T-}
 ws-icon-6 = 7;%{T3}%{T-}
 ws-icon-7 = 8;%{T3}%{T-}
 ws-icon-8 = 9;%{T3}%{T-}
-ws-icon-9 = 10;%{T3}%{T-}
+ws-icon-9 = 10;%{T3}%{T-}
 ws-icon-default = "%{T4}%{T-} "
 format = <label-state> 
 ;<label-mode>
