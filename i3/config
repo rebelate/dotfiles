@@ -217,10 +217,10 @@ for_window [class="Nautilus"] move to workspace $ws4
 for_window [class="Code"] move to workspace $ws3
 for_window [class="Blender"] move to workspace $ws3
 
-bindsym $mod+Shift+w exec firefox ; workspace $ws2
-bindsym $mod+c exec code ; workspace $ws3
-bindsym $mod+Shift+s exec spotify ; workspace $ws5
-bindsym $mod+e exec nautilus ; workspace $ws4 
+bindsym $mod+Shift+w exec --no-startup-id firefox ; workspace $ws2
+bindsym $mod+c exec --no-startup-id code ; workspace $ws3
+bindsym $mod+Shift+s exec --no-startup-id spotify ; workspace $ws5
+bindsym $mod+e exec --no-startup-id nautilus ; workspace $ws4 
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -262,7 +262,7 @@ bindsym $mod+y exec "bash /home/arsil/.config/mpv/scripts/yt.sh"
 
 # Wallpaper
 # exec_always feh --bg-fill ~/Pictures/Wallpapers/luca-bravo-O453M2Liufs-unsplash.jpg
-exec wal -i Pictures/Wallpapers/Wallpaper-019.jpg --saturate .7 -s
+exec_always --no-startup-id wal -i Pictures/Wallpapers/Wallpaper-019.jpg --saturate .7 -s
 
 # i3Lock key-map
 bindsym $mod+x exec --no-startup-id "source $HOME/.config/i3/lock.sh;lock"
