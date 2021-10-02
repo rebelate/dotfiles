@@ -7,6 +7,7 @@ Plug 'terrortylor/nvim-comment'
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
 Plug 'hrsh7th/nvim-compe'
+Plug 'folke/trouble.nvim'
 
 Plug 'hrsh7th/vim-vsnip'
 let g:vsnip_filetypes = {}
@@ -23,16 +24,15 @@ let g:prettier#quickfix_enabled = 0
 let g:prettier#autoformat_require_pragma = 0
 au BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.json PrettierAsync
 
-Plug 'dense-analysis/ale'
-let g:ale_linter_aliases = {'svelte': ['css', 'javascript']}
-let g:ale_linters = {'svelte': ['stylelint', 'eslint']}
+" Plug 'dense-analysis/ale'
+" let g:ale_linter_aliases = {'svelte': ['css', 'javascript']}
+" let g:ale_linters = {'svelte': ['stylelint', 'eslint']}
 
 Plug 'Shougo/context_filetype.vim'
 if !exists('g:context_filetype#same_filetypes')
   let g:context_filetype#filetypes = {}
 endif
 
-Plug 'udalov/kotlin-vim'
 
 let g:context_filetype#filetypes.svelte =
 \ [
@@ -48,9 +48,10 @@ let g:context_filetype#filetypes.svelte =
 let g:ft = ''
 
 Plug 'pangloss/vim-javascript'
+Plug 'udalov/kotlin-vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'leafOfTree/vim-svelte-plugin'
-
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 
 Plug 'windwp/nvim-autopairs'
 
