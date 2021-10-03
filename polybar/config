@@ -26,12 +26,12 @@ foreground-alt = #eceff4
 primary = #5E81AC
 secondary = #e60053
 alert = #bd2c40
-; shade1 = #DDA96A
-; shade2 = #009999
-; shade3 = #81A9BB 
-shade1 = ${xrdb:color7:#222}
-shade2 = ${xrdb:color4:#222}
-shade3 = ${xrdb:color1:#222}
+shade1 = #84668E
+shade2 = #CD3864
+shade3 = #5D3653 
+; shade1 = ${xrdb:color7:#222}
+; shade2 = ${xrdb:color4:#222}
+; shade3 = ${xrdb:color1:#222}
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
