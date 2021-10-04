@@ -89,7 +89,7 @@ bindsym Control+Print exec --no-startup-id scrot -q 100 /tmp/ -e 'xclip -selecti
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-for_window [instance="floating"] floating enable
+for_window [instance="floating"] floating enable sticky enable
 # start a terminal
 bindsym $mod+Return exec --no-startup-id tilix
 bindsym $mod+Shift+Return exec --no-startup-id alacritty --class floating
