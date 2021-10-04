@@ -63,8 +63,8 @@ case $chosen in
 		if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
 		    # mpc -q pause
 			# amixer set Master mute
-			lock
-			systemctl suspend
+			sleep 0.2 && lock&
+			sleep 3 && systemctl suspend
 		elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
 			exit 0
         else
