@@ -91,6 +91,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.npm/bin:$PATH"
 export PATH="/opt/ffmpeg_build/bin:$PATH"
 export PATH=".local/bin:$PATH"
+export PATH="/home/arsil/.cargo/bin:$PATH"
 export LS_COLORS="$LS_COLORS:ow=1;35;107:tw=1;34:"
 export GRADLE_USER_HOME="/usr/local/share/gradle"
 
