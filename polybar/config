@@ -143,9 +143,9 @@ format = %{T2}%{T-} %{T6} <label>%{T-}
 exec = python ~/.config/polybar/scripts/spotify.py -f '{song}'
 format-underline = ${colors.shade2}
 ;control players (optional)
-click-left = playerctl --player=spotify play-pause 
-click-right = playerctl --player=spotify next 
-click-middle = playerctl --player=spotify previous 
+click-left = playerctl play-pause --player=rhythmbox,spotify
+click-right = playerctl next --player=rhythmbox,spotify
+click-middle = playerctl previous --player=rhythmbox,spotify
 
 [module/xwindow]
 type = internal/xwindow
