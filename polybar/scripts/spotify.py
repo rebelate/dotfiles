@@ -47,7 +47,6 @@ parser.add_argument(
 
 args = parser.parse_args()
 
-
 def fix_string(string):
     # corrects encoding for the python version used
     if sys.version_info.major == 3:
@@ -63,8 +62,6 @@ def truncate(name, trunclen):
         if ('(' in name) and (')' not in name):
             name += ')'
     return name
-
-
 
 # Default parameters
 output = fix_string(u'{play_pause} {artist}: {song}')
@@ -85,22 +82,17 @@ if args.custom_format is not None:
 if args.play_pause is not None:
     play_pause = args.play_pause
 
-try:
-    session_bus = dbus.SessionBus()
-    spotify_bus = session_bus.get_object(
-        'org.mpris.MediaPlayer2.spotify',
-        '/org/mpris/MediaPlayer2'
-    )
-
-    spotify_properties = dbus.Interface(
-        spotify_bus,
+def get_player():
+    player_properties = dbus.Interface(
+        player_bus,
         'org.freedesktop.DBus.Properties'
     )
 
-    metadata = spotify_properties.Get('org.mpris.MediaPlayer2.Player', 'Metadata')
-    status = spotify_properties.Get('org.mpris.MediaPlayer2.Player', 'PlaybackStatus')
+    metadata = player_properties.Get('org.mpris.MediaPlayer2.Player', 'Metadata')
+    status = player_properties.Get('org.mpris.MediaPlayer2.Player', 'PlaybackStatus')
 
     # Handle play/pause label
+    global play_pause
 
     play_pause = play_pause.split(',')
 
@@ -134,6 +126,20 @@ try:
                                      play_pause=play_pause, 
                                      album=album), trunclen + 4))
 
+
+try:
+    session_bus = dbus.SessionBus()
+    player_bus = session_bus.get_object(
+        'org.mpris.MediaPlayer2.rhythmbox',
+        '/org/mpris/MediaPlayer2'
+    )
+    if player_bus == None:
+        player_bus = session_bus.get_object(
+            'org.mpris.MediaPlayer2.spotify',
+            '/org/mpris/MediaPlayer2'
+        )
+      
+    get_player()   
 except Exception as e:
     if isinstance(e, dbus.exceptions.DBusException):
         print('')
