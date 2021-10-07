@@ -57,11 +57,11 @@ bindsym XF86MonBrightnessDown exec --no-startup-id bash ~/.config/dunst/brightne
 bindsym XF86TouchpadToggle exec --no-startup-id ~/.config/i3/toggletouchpad.sh # toggle touchpad
 
 # # Media player controls
-bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause -p spotify
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause -p spotify || playerctl play-pause -p rhythmbox
 #bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec --no-startup-id playerctl next -p spotify
-bindsym XF86AudioPrev exec --no-startup-id playerctl previous -p spotify
-bindsym XF86AudioStop exec --no-startup-id playerctl stop -p spotify
+bindsym XF86AudioNext exec --no-startup-id playerctl next -p spotify || playerctl next -p rhythmbox
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous -p spotify || playerctl next -p rhythmbox
+bindsym XF86AudioStop exec --no-startup-id playerctl stop -p spotify || playerctl next -p rhythmbox
 
 
 # Use pactl to adjust volume in PulseAudio.
