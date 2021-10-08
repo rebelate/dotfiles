@@ -129,11 +129,13 @@ def get_player():
 
 try:
     session_bus = dbus.SessionBus()
-    player_bus = session_bus.get_object(
-        'org.mpris.MediaPlayer2.rhythmbox',
-        '/org/mpris/MediaPlayer2'
-    )
-    if player_bus == None:
+    try:
+        player_bus = session_bus.get_object(
+            'org.mpris.MediaPlayer2.rhythmbox',
+            '/org/mpris/MediaPlayer2'
+        )
+        
+    except:
         player_bus = session_bus.get_object(
             'org.mpris.MediaPlayer2.spotify',
             '/org/mpris/MediaPlayer2'
