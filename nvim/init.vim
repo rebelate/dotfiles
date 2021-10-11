@@ -206,8 +206,7 @@ Plug 'andweeb/presence.nvim'
     match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
     " Load colorschemes
-    Plug 'chriskempson/base16-vim'
-    Plug 'joshdick/onedark.vim'
+    Plug 'rebelate/onedark-red'
 
     call plug#end()
 
