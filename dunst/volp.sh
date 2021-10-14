@@ -6,7 +6,9 @@
 # $./volume.sh mute
 
 #cur_sink=$( pactl list short sinks | sed -e 's,^\([0-9][0-9]*\)[^0-9].*,\1,' | head -n 1 )
-sink=$(pactl list short | grep RUNNING | sed -e 's,^\([0-9][0-9]*\)[^0-9].*,\1,')
+excl1="pulseeffects_sink.monitor"
+excl2="pulseeffects_sink"
+sink=$(pactl list short | grep RUNNING | grep -v $excl1 | grep -v $excl2 | sed -e 's,^\([0-9][0-9]*\)[^0-9].*,\1,')
 def_sink=$(pactl list short|grep alsa_output.pci-0000_00_1f.3.analog-stereo|head -n 1|awk '{print $1}')
 cur_sink=$([ -n "$sink" ] && echo "$sink" || echo "$def_sink")
 function get_volume {

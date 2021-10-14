@@ -1,9 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'tpope/vim-fugitive'
-
 Plug 'terrortylor/nvim-comment'
-
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
 Plug 'hrsh7th/nvim-compe'
@@ -12,8 +10,8 @@ nnoremap <silent> gh :Lspsaga lsp_finder<CR>
 nnoremap <silent> K :Lspsaga hover_doc<CR>
 nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
 nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
-Plug 'folke/trouble.nvim'
 
+Plug 'folke/trouble.nvim'
 Plug 'hrsh7th/vim-vsnip'
 let g:vsnip_filetypes = {}
 let g:vsnip_filetypes.javascriptreact = ['javascript']
@@ -22,7 +20,6 @@ let g:vsnip_filetypes.javascript = ['javascript']
 let g:vsnip_filetypes.svelte = ['javascript']
 
 Plug 'rafamadriz/friendly-snippets'
-
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 " Prettier Settings
 let g:prettier#quickfix_enabled = 0
@@ -38,7 +35,6 @@ if !exists('g:context_filetype#same_filetypes')
   let g:context_filetype#filetypes = {}
 endif
 
-
 let g:context_filetype#filetypes.svelte =
 \ [
 \   {'filetype' : 'javascript', 'start' : '<script>', 'end' : '</script>'},
@@ -52,33 +48,20 @@ let g:context_filetype#filetypes.svelte =
 
 let g:ft = ''
 
-Plug 'pangloss/vim-javascript'
-Plug 'udalov/kotlin-vim'
-Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'leafOfTree/vim-svelte-plugin'
-Plug 'jackguo380/vim-lsp-cxx-highlight'
-
 Plug 'windwp/nvim-autopairs'
-
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
-
 Plug 'matze/vim-move'
-
-
 Plug 'folke/which-key.nvim'
-
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
 Plug 'voldikss/vim-floaterm'
-
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-
 Plug 'mhinz/vim-startify'
 Plug 'chrisbra/Colorizer'
 Plug 'andweeb/presence.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
 
 " General {{{
 	" Map Capslock when nvim started and reset on closing 
