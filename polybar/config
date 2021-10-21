@@ -341,6 +341,7 @@ type = internal/network
 interface = eno1
 interval = 3.0
 format-connected-padding = 1
+format-disconnected-padding = 1
 format-connected-offset = -1
 ;format-connected-underline = #55aa55
 ;format-connected-prefix = " "
@@ -348,10 +349,10 @@ format-connected-background = ${colors.shade3}
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %{T2}ﯱ%{T-} %downspeed%
 
-;format-disconnected =
+format-disconnected-background = ${colors.shade3}
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
-label-disconnected = %{T2}%{T-} disconnected
+label-disconnected = %{T2}%{T-}
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/date]
@@ -384,7 +385,6 @@ label-volume = %percentage%
 label-volume-foreground = ${root.foreground}
 interval = 2
 label-muted = %{T5}%{T-}
-label-muted-foreground = #666
 
 ramp-volume-0 = %{T5}%{T-}
 ramp-volume-1 = %{T5}%{T-}

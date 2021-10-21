@@ -76,6 +76,7 @@ Plug 'voldikss/vim-floaterm'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+" Plug 'glepnir/dashboard-nvim'
 Plug 'mhinz/vim-startify'
 Plug 'chrisbra/Colorizer'
 Plug 'andweeb/presence.nvim'
