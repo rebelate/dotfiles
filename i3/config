@@ -81,7 +81,6 @@ bindsym Control+Print exec --no-startup-id scrot -q 100 /tmp/ -e 'xclip -selecti
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-for_window [instance="floating"] floating enable sticky enable
 # start a terminal
 bindsym $mod+Return exec --no-startup-id tilix
 bindsym $mod+Shift+Return exec --no-startup-id alacritty --class floating
@@ -192,6 +191,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 #Assign programs to workspaces use xprop for class name
+for_window [instance="floating"] floating enable sticky enable
 for_window [class="jetbrains-idea-ce"] move to workspace $ws3
 for_window [class="Firefox"] move to workspace $ws2
 for_window [class="zoom"] floating enable
@@ -199,6 +199,8 @@ for_window [class="Pavucontrol"] floating enable
 for_window [class="Blender"] floating enable
 for_window [class="Unity"] floating enable
 for_window [class="xpad"] floating enable
+for_window [class="Gnome-calculator"] floating enable
+for_window [class="mpv"] floating enable sticky enable
 
 # exec --no-startup-id xpad
 exec --no-startup-id tilix
