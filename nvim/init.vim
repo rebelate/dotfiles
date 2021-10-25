@@ -99,7 +99,7 @@ Plug 'nvim-treesitter/nvim-treesitter'
     endif
 
     set backspace=indent,eol,start " make backspace behave in a sane manner
-    set clipboard=unnamed,unnamedplus
+    set clipboard=unnamedplus
 
     if has('mouse')
         set mouse=a
@@ -312,9 +312,9 @@ Plug 'nvim-treesitter/nvim-treesitter'
     let mapleader = ','
     
     " set a timeout
-    set timeoutlen=100
-	:autocmd InsertEnter * set timeoutlen=250
-	:autocmd InsertLeave * set timeoutlen=100
+    set timeoutlen=200
+	" :autocmd InsertEnter * set timeoutlen=250
+	" :autocmd InsertLeave * set timeoutlen=100
 
 	nmap <C-h> <C-w>h
 	nmap <C-l> <C-w>l

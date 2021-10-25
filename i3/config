@@ -149,6 +149,8 @@ bindsym $mod+Shift+b move container to workspace back_and_forth
 # focus the parent container
 bindsym $mod+a focus parent
 
+bindsym $mod+F1 layout splitv;move left;resize grow right 18 px or 18 ppt;split v;focus right;move left;resize shrink height 30 px or 30 ppt;focus up
+
 # focus the child container
 #bindsym $mod+d focus child
 
