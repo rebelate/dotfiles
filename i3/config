@@ -214,6 +214,8 @@ for_window [class="discord"] move to workspace $ws6
 for_window [class="Nautilus"] move to workspace $ws4
 for_window [class="Code"] move to workspace $ws3
 for_window [class="Rhythmbox"] move to workspace $ws5
+for_window [class="VirtualBox Machine"] move to workspace $ws10
+for_window [class="VirtualBox Manager"] move to workspace $ws10
 
 bindsym $mod+Shift+w exec --no-startup-id firefox ; workspace $ws2
 bindsym $mod+c exec --no-startup-id code ; workspace $ws3
