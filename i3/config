@@ -68,6 +68,7 @@ bindsym XF86AudioStop exec --no-startup-id "playerctl stop --player=rhythmbox,sp
 # bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 # bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 # bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindcode --release 108 exec --no-startup-id bash ~/.config/dunst/volp.sh togglemic
 bindsym XF86AudioRaiseVolume exec --no-startup-id bash ~/.config/dunst/volp.sh up
 bindsym XF86AudioLowerVolume exec --no-startup-id bash ~/.config/dunst/volp.sh down
 bindsym XF86AudioMute exec --no-startup-id bash ~/.config/dunst/volp.sh mute

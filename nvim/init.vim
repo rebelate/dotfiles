@@ -312,7 +312,7 @@ Plug 'nvim-treesitter/nvim-treesitter'
     let mapleader = ','
     
     " set a timeout
-    set timeoutlen=200
+    set timeoutlen=500
 	" :autocmd InsertEnter * set timeoutlen=250
 	" :autocmd InsertLeave * set timeoutlen=100
 
