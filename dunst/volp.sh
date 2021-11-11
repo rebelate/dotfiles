@@ -93,7 +93,7 @@ case $1 in
 	fi
 	;;
   togglemic)
-	pactl set-source-mute @DEFAULT_SOURCE@ toggle ; CURRENT_SOURCE=$(pactl info | grep "Default Source" | cut -f3 -d" ") ; pactl list sources | grep -A 10 $CURRENT_SOURCE | (grep -q "Mute: yes" && dunstify "Muted" -t 1000) ||
-	  dunstify "Unmuted" -t 1000
+	pactl set-source-mute @DEFAULT_SOURCE@ toggle ; CURRENT_SOURCE=$(pactl info | grep "Default Source" | cut -f3 -d" ") ; pactl list sources | grep -A 10 $CURRENT_SOURCE | (grep -q "Mute: yes" && dunstify "Muted" -t 500) ||
+	  dunstify "Unmuted" -t 500
 	;;
 esac
