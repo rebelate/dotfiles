@@ -10,7 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 exec --no-startup-id xrandr --output HDMI-A-0 --mode 1280x1024 -r 60.02
 exec --no-startup-id /usr/libexec/gsd-xsettings
-exec --no-startup-id xset r rate 250
+exec --no-startup-id xset r rate 350
 # Fix a bug in gnome-settings-daemon: http://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
 exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
 
@@ -76,7 +76,7 @@ bindsym XF86AudioMute exec --no-startup-id bash ~/.config/dunst/volp.sh mute
 # Print screen for screenshots
 bindsym --release Print exec --no-startup-id scrot -q 80 "Screenshot %Y-%m-%d_%S-%M-%H.png" -e 'mv "$f" ~/Pictures/ && dunstify -t 2000 "Screenshot Captured" "File : ~/Pictures/$f"'
 bindsym --release Control+Print exec --no-startup-id scrot -s -q 90 /tmp/ -e 'xclip -selection clipboard -t image/png $f && dunstify -t 2000 "Screenshot Captured to Clipboard"'
-bindsym --release $mod+Control+Print exec --no-startup-id scrot -q 90 /tmp/ -e 'xclip -selection clipboard -t image/png $f && dunstify -t 2000 "Screenshot Captured to Clipboard"'
+bindsym --release $mod+Print exec --no-startup-id scrot -q 90 /tmp/ -e 'xclip -selection clipboard -t image/png $f && dunstify -t 2000 "Screenshot Captured to Clipboard"'
 # bindsym Print exec gnome-screenshot 
 # bindsym Control+Print exec gnome-screenshot -c
 # bindsym Mod1+Print exec gnome-screenshot -a
@@ -122,6 +122,15 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
+# Show the mpv scratchpad window, if any.
+bindsym $mod+Shift+m [class="mpv"] scratchpad Show
 
 # split in horizontal orientation
 bindsym $mod+Shift+v split h
