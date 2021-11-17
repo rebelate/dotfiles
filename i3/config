@@ -10,7 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 exec --no-startup-id xrandr --output HDMI-A-0 --mode 1280x1024 -r 60.02
 exec --no-startup-id /usr/libexec/gsd-xsettings
-exec --no-startup-id xset r rate 350
+exec --no-startup-id xset r rate 450
 # Fix a bug in gnome-settings-daemon: http://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
 exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
 
@@ -228,7 +228,8 @@ for_window [class="Rhythmbox"] move to workspace $ws5
 for_window [class="VirtualBox Machine"] move to workspace $ws10
 for_window [class="VirtualBox Manager"] move to workspace $ws10
 
-bindsym $mod+Shift+w exec --no-startup-id firefox ; workspace $ws2
+bindsym $mod+w exec --no-startup-id firefox ; workspace $ws2
+bindsym $mod+Shift+w exec --no-startup-id "surf web.whatsapp.com"
 bindsym $mod+c exec --no-startup-id code ; workspace $ws3
 bindsym $mod+Shift+s exec --no-startup-id spotify ; workspace $ws5
 bindsym $mod+i exec --no-startup-id idea ; workspace $ws3
