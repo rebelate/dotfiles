@@ -204,8 +204,6 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 #Assign programs to workspaces use xprop for class name
 for_window [instance="floating"] floating enable sticky enable
-for_window [class="jetbrains-idea-ce"] move to workspace $ws3
-for_window [class="Firefox"] move to workspace $ws2
 for_window [class="zoom"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Blender"] floating enable
@@ -218,12 +216,15 @@ for_window [class="mpv"] floating enable sticky enable
 exec --no-startup-id tilix
 exec --no-startup-id pulseeffects
 exec --no-startup-id thunderbird
+for_window [class="Firefox"] move to workspace $ws2
 for_window [class="Thunderbird"] move to workspace $ws7
 for_window [class="Pulseeffects"] move to workspace $ws5
 for_window [class="Spotify"] move to workspace $ws5
 for_window [class="discord"] move to workspace $ws6
 for_window [class="Nautilus"] move to workspace $ws4
 for_window [class="Code"] move to workspace $ws3
+for_window [class="Atom"] move to workspace $ws3
+for_window [class="jetbrains-idea-ce"] move to workspace $ws3
 for_window [class="Rhythmbox"] move to workspace $ws5
 for_window [class="VirtualBox Machine"] move to workspace $ws10
 for_window [class="VirtualBox Manager"] move to workspace $ws10
