@@ -72,7 +72,7 @@ font-5 = "Noto Sans CJK JP:size=8:weight=bold;1"
 
 modules-left = launcher name spotify
 modules-center = i3
-modules-right = arL1 temperature arL2 memory arL3 xkeyboard eth arL4 pulseaudio arL2 date
+modules-right = arL1 temperature arL2 memory arL3 cam xkeyboard eth arL4 pulseaudio arL2 date
 
 ;tray-position = right
 ;tray-padding = 2
@@ -134,6 +134,14 @@ type = custom/text
 content = "Arsil@ace:~"
 content-font = 1
 content-padding = 2
+
+[module/cam]
+type = custom/script
+interval = 1
+format-background = ${colors.shade3}
+format-padding = 1
+format = "%{T4}<label>%{T-}"
+exec = "fuser /dev/video1 &> /dev/null && echo "
 
 [module/spotify]
 type = custom/script
