@@ -70,9 +70,9 @@ font-5 = "Noto Sans CJK JP:size=8:weight=bold;1"
 ;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 ;font-2 = siji:pixelsize=10;1
 
-modules-left = launcher name spotify
+modules-left = launcher name spotify cam
 modules-center = i3
-modules-right = arL1 temperature arL2 memory arL3 cam xkeyboard eth arL4 pulseaudio arL2 date
+modules-right = arL1 temperature arL2 memory arL3 xkeyboard eth arL4 pulseaudio arL2 date
 
 ;tray-position = right
 ;tray-padding = 2
@@ -138,7 +138,7 @@ content-padding = 2
 [module/cam]
 type = custom/script
 interval = 1
-format-background = ${colors.shade3}
+; label-foreground = ${colors.shade2}
 format-padding = 1
 format = "%{T4}<label>%{T-}"
 exec = "fuser /dev/video1 &> /dev/null && echo "
