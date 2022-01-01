@@ -5,11 +5,13 @@ Plug 'terrortylor/nvim-comment'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'hrsh7th/nvim-compe'
-Plug 'glepnir/lspsaga.nvim'
-nnoremap <silent> gh :Lspsaga lsp_finder<CR>
+Plug 'tami5/lspsaga.nvim', {'branch':'nvim51'}
 nnoremap <silent> K :Lspsaga hover_doc<CR>
 nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
 nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
+nnoremap <silent> gh :Lspsaga lsp_finder<CR>
+nnoremap <silent> gr :Lspsaga rename<CR>
+nnoremap <silent> gd :Lspsaga preview_definition<CR>
 
 Plug 'folke/trouble.nvim'
 Plug 'hrsh7th/vim-vsnip'
