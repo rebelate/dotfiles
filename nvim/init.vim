@@ -1,18 +1,12 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'tpope/vim-fugitive'
-Plug 'terrortylor/nvim-comment'
+Plug 'preservim/nerdcommenter'
+let g:NERDCreateDefaultMappings = 0
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'hrsh7th/nvim-compe'
 Plug 'tami5/lspsaga.nvim', {'branch':'nvim51'}
-nnoremap <silent> K :Lspsaga hover_doc<CR>
-nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
-nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
-nnoremap <silent> gh :Lspsaga lsp_finder<CR>
-nnoremap <silent> gr :Lspsaga rename<CR>
-nnoremap <silent> gd :Lspsaga preview_definition<CR>
-
 Plug 'folke/trouble.nvim'
 Plug 'hrsh7th/vim-vsnip'
 let g:vsnip_filetypes = {}
@@ -54,7 +48,7 @@ Plug 'windwp/nvim-autopairs'
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'matze/vim-move'
-" Plug 'folke/which-key.nvim'
+Plug 'folke/which-key.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'voldikss/vim-floaterm'
@@ -283,6 +277,7 @@ Plug 'nvim-treesitter/nvim-treesitter'
   nnoremap <C-n> :NvimTreeToggle<CR>
   nnoremap <leader>r :NvimTreeRefresh<CR>
   nnoremap <leader>n :NvimTreeFindFile<CR>
+  nnoremap <leader>y "+yy
   " NvimTreeOpen, NvimTreeClose, NvimTreeFocus, NvimTreeFindFileToggle, and NvimTreeResize are also available if you need them
 
   set termguicolors " this variable must be enabled for colors to be applied properly
@@ -309,6 +304,16 @@ Plug 'nvim-treesitter/nvim-treesitter'
 	noremap  <C-t>  :FloatermToggle<CR>
 	noremap! <C-t>  <Esc> :FloatermToggle<CR>
 	tnoremap <C-t>  <C-\><C-n>:FloatermToggle<CR>
+
+	nnoremap <silent> K :Lspsaga hover_doc<CR>
+	nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
+	nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
+	nnoremap <silent> gh :Lspsaga lsp_finder<CR>
+	nnoremap <silent> gr :Lspsaga rename<CR>
+	nnoremap <silent> gd :Lspsaga preview_definition<CR>
+	
+	nmap <leader>/ <Plug>NERDCommenterToggle
+	vmap <leader>/ <Plug>NERDCommenterToggle<CR>gv
 
 	" buffer list
 	nnoremap gb :ls<CR>:buffer<Space>

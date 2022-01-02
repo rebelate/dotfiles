@@ -35,10 +35,8 @@ local saga = require 'lspsaga'
 -- the related filetypes into this table
 -- like server_filetype_map = {metals = {'sbt', 'scala'}}
 -- server_filetype_map = {}
-
 saga.init_lsp_saga()
 
-require('nvim_comment').setup()
 -- compe
 vim.o.completeopt = "menuone,noselect"
 
@@ -182,32 +180,32 @@ require'lspconfig'.rust_analyzer.setup {
 }
 
 -- whichkey
--- require("which-key").setup {
--- 		plugins = {
--- 			marks = true, -- shows a list of your marks on ' and `
--- 			registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
--- 			spelling = {
--- 				enabled = false, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
--- 				suggestions = 20, -- how many suggestions should be shown in the list?
--- 				},
--- 			-- the presets plugin, adds help for a bunch of default keybindings in Neovim
--- 			-- No actual key bindings are created
--- 			presets = {
--- 				operators = true, -- adds help for operators like d, y, ... and registers them for motion / text object completion
--- 				motions = true, -- adds help for motions
--- 				text_objects = true, -- help for text objects triggered after entering an operator
--- 				windows = true, -- default bindings on <c-w>
--- 				},
--- 		},
--- 		triggers_blacklist = {
--- 			-- list of mode / prefixes that should never be hooked by WhichKey
--- 			-- this is mostly relevant for key maps that start with a native binding
--- 			-- most people should not need to change this
--- 			i = { "j", "k" },
--- 			v = { "j", "k" },
--- 			c = {"k"},
--- 	  },
--- }
+require("which-key").setup {
+		plugins = {
+			marks = true, -- shows a list of your marks on ' and `
+			registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
+			spelling = {
+				enabled = false, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
+				suggestions = 20, -- how many suggestions should be shown in the list?
+				},
+			-- the presets plugin, adds help for a bunch of default keybindings in Neovim
+			-- No actual key bindings are created
+			presets = {
+				operators = true, -- adds help for operators like d, y, ... and registers them for motion / text object completion
+				motions = true, -- adds help for motions
+				text_objects = true, -- help for text objects triggered after entering an operator
+				windows = true, -- default bindings on <c-w>
+				},
+		},
+		triggers_blacklist = {
+			-- list of mode / prefixes that should never be hooked by WhichKey
+			-- this is mostly relevant for key maps that start with a native binding
+			-- most people should not need to change this
+			i = { "j", "k" },
+			v = { "j", "k" },
+			c = {"k"},
+	  },
+}
 
 -- autopairs
 require('nvim-autopairs').setup{}
