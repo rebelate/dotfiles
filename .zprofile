@@ -1,10 +1,5 @@
-# .zsh_profile
-# Get the aliases and functions
+# Get other aliases and functions
 if [ -f ~/.zshrc ]; then
-	. ~/.zshrc
-fi
-# startup
-if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec startx
+  . ~/.zshrc
 fi
 # User specific environment and startup programs

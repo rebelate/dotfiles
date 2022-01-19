@@ -87,17 +87,26 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-export PATH="$HOME/.npm/bin:$PATH"
-export PATH="/opt/ffmpeg_build/bin:$PATH"
+export EDITOR="nvim"
 export PATH="$HOME/.local/bin:$PATH"
+export GRADLE_USER_HOME="/mnt/data/.gradle"
+export ANDROID_HOME="/mnt/data1/Android/Sdk"
+export PATH="$HOME/.npm/bin:$PATH"
+# export PATH="/opt/ffmpeg_build/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export RUSTUP_HOME="/opt/rustup"
 export LS_COLORS="$LS_COLORS:ow=1;35;107:tw=1;34:"
-export GRADLE_USER_HOME="/usr/local/share/gradle"
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
 
-# LIBTORCH
-export USE_LIBTORCH_NIGHTLY="true"
-export LIBTORCH_HOME="/opt/libtorch"
+# TORCH
+# tch-rs
+export LIBTORCH="/mnt/data1/conda/lib/python3.7/site-packages/torch"
+# ld
+export LD_LIBRARY_PATH="$LIBTORCH/lib:$LD_LIBRARY_PATH"
+# cmake
+export Torch_DIR="$LIBTORCH/torch/share/cmake/Torch"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -130,6 +139,10 @@ alias uptime='uptime -p'
 alias free='free -h'
 alias vim='nvim'
 alias nvim-init='vim /home/arsil/.config/nvim/init.lua'
+alias lt='ls -laht'
+alias cat='bat'
+alias flip='ffmpeg -f v4l2 -i /dev/video1 -vf "hflip,format=yuv420p" -f v4l2 /dev/video0'
+alias assist='/home/arsil/assistance/bin/assistance'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
