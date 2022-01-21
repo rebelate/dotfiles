@@ -232,7 +232,7 @@ for_window [class="VirtualBox Manager"] move to workspace $ws10
 bindsym $mod+w exec --no-startup-id firefox ; workspace $ws2
 bindsym $mod+Shift+w exec --no-startup-id "surf web.whatsapp.com"
 bindsym $mod+c exec --no-startup-id code ; workspace $ws3
-bindsym $mod+Shift+s exec --no-startup-id spotify ; workspace $ws5
+bindsym $mod+Shift+s exec --no-startup-id pulseeffects ; workspace $ws5
 bindsym $mod+i exec --no-startup-id idea ; workspace $ws3
 bindsym $mod+e exec --no-startup-id nautilus ; workspace $ws4 
 
