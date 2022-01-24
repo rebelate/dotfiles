@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 dir="$HOME/.config/rofi/powermenu"
-rofi_command="rofi -theme $dir/five.rasi"
+rofi_command="rofi -theme $dir/card_alt.rasi"
 source "$HOME/.config/i3/lock.sh"
 
 uptime=$(uptime -p | sed -e 's/up //g')
