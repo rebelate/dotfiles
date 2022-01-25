@@ -78,10 +78,15 @@ element-icon {
   padding: 10px 10px;
 }
 
+element-icon selected {
+  background-color: @fg-alt;
+}
+
 element-text {
   padding: 10px 0;
 }
 
 element-text selected {
-  text-color: @fg-alt;
+  background-color: @fg-alt;
+  text-color: white;
 }

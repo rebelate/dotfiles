@@ -127,7 +127,7 @@ content-font = 2
 content-foreground = ${colors.shade2}
 ;content-foreground=${colors.foreground}
 content-padding=0
-click-left= "bash ~/.config/polybar/scripts/launcher.sh"
+click-left= "exec rofi -modi drun -show drun -theme nord"
 
 [module/name]
 type = custom/text

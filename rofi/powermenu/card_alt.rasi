@@ -16,8 +16,8 @@ window {
     background-color:               @background;
     text-color:                     @foreground;
     border-radius:                  0%;
-    height:                         29%;
-    width:                          54%;
+    height:                         26%;
+    width:                          49.5%;
     location:                       center;
     x-offset:                       0;
     y-offset:                       0;
@@ -75,7 +75,7 @@ element {
 }
 
 element-text {
-	font:							"feather 32";
+	font:							"feather 22";
     expand:                         true;
     horizontal-align:               0.5;
     vertical-align:                 0.5;
@@ -83,7 +83,9 @@ element-text {
 	background-color:				transparent;
 	text-color:						@foreground;
 }
-
+element-text selected {
+	text-color:						white;
+}
 element normal.urgent,
 element alternate.urgent {
     background-color:               @urgent;

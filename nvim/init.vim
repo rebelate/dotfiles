@@ -5,15 +5,15 @@ Plug 'preservim/nerdcommenter'
 let g:NERDCreateDefaultMappings = 0
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
-Plug 'hrsh7th/nvim-compe'
+Plug 'onsails/lspkind-nvim'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/cmp-vsnip'
 Plug 'tami5/lspsaga.nvim', {'branch':'nvim51'}
 Plug 'folke/trouble.nvim'
-Plug 'hrsh7th/vim-vsnip'
-let g:vsnip_filetypes = {}
-let g:vsnip_filetypes.javascriptreact = ['javascript']
-let g:vsnip_filetypes.typescriptreact = ['typescript']
-let g:vsnip_filetypes.javascript = ['javascript']
-let g:vsnip_filetypes.svelte = ['javascript']
 
 Plug 'rafamadriz/friendly-snippets'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
@@ -57,7 +57,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'mhinz/vim-startify'
 Plug 'chrisbra/Colorizer'
 Plug 'andweeb/presence.nvim'
-Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " General {{{
 	" Map Capslock when nvim started and reset on closing 
@@ -192,20 +192,6 @@ Plug 'nvim-treesitter/nvim-treesitter'
     colorscheme onedark
 	hi Normal guibg=NONE ctermbg=NONE
     let &fcs='eob: ' "hide tilde color
-" }}}
-
-" LSP {{{
-	" auto-format
-	autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
-	autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
-	autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
-		
-	inoremap <silent><expr> <C-Space> compe#complete()
-	inoremap <silent><expr> <CR>      compe#confirm(luaeval("require 'nvim-autopairs'.autopairs_cr()"))
-	inoremap <silent><expr> <C-e>     compe#close('<C-e>')
-	inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
-	inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
-
 " }}}
 
 " NvimTree {{{

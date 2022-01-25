@@ -4,6 +4,6 @@
     foreground:                     #81A1C1;
     border:               			#CA8CA5;
     border-alt:               		#F0B2B3;
-    selected:               		#C75678;
+    selected:               		#CD3864;
     urgent:                         #DA4453;
 }
