@@ -141,7 +141,7 @@ interval = 1
 ; label-foreground = ${colors.shade2}
 format-padding = 1
 format = "%{T4}<label>%{T-}"
-exec = "fuser /dev/video1 &> /dev/null && echo '' || fuser /dev/video3 &> /dev/null && echo ''"
+exec = bash ~/.config/polybar/scripts/cam.sh
 
 [module/spotify]
 type = custom/script
