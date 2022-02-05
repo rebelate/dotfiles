@@ -1,0 +1,20 @@
+ sudo dnf install \
+ alsa-lib-devel \
+ aubio-devel \
+ glibmm24-devel \
+ gtkmm24-devel \
+ libarchive-devel \
+ libcurl-devel \
+ liblo-devel \
+ liblrdf-devel \
+ libsndfile-devel \
+ libusb-devel \
+ lilv-devel \
+ lv2-devel \
+ pangomm-devel \
+ rubberband-devel \
+ serd-devel \
+ sord-devel \
+ sratom-devel \
+ taglib-devel \
+ vamp-plugin-sdk-devel
