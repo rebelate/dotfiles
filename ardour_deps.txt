@@ -17,4 +17,7 @@
  sord-devel \
  sratom-devel \
  taglib-devel \
- vamp-plugin-sdk-devel
+ vamp-plugin-sdk-devel \
+ pipewire-jack-audio-connection-kit-devel \
+ libwebsockets-devel \
+ suil-devel \
