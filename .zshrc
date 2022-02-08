@@ -143,5 +143,9 @@ alias flip='ffmpeg -f v4l2 -i /dev/video1 -vf "hflip,format=yuv420p" -f v4l2 /de
 alias assist='/home/arsil/assistance/bin/assistance'
 alias pipewire-restart='systemctl --user restart pipewire pipewire-pulse && systemctl --user daemon-reload'
 
+function pdf-compress() {
+  gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$2" "$1"
+}
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

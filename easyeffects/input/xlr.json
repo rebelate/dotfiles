@@ -58,7 +58,7 @@
                 },
                 "band1": {
                     "frequency": 59.763340205038524,
-                    "gain": 2.75,
+                    "gain": 0.0,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.5047602375372453,
@@ -128,7 +128,7 @@
                 },
                 "band8": {
                     "frequency": 7523.758767782307,
-                    "gain": 1.5,
+                    "gain": 0.35,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.5047602375372453,
@@ -163,7 +163,7 @@
                 },
                 "band1": {
                     "frequency": 59.763340205038524,
-                    "gain": 2.75,
+                    "gain": 0.0,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.5047602375372453,
@@ -233,7 +233,7 @@
                 },
                 "band8": {
                     "frequency": 7523.758767782307,
-                    "gain": 1.5,
+                    "gain": 0.35,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.5047602375372453,
@@ -271,7 +271,7 @@
             "release": 5.0,
             "sidechain-preamp": 0.0,
             "stereo-link": 100.0,
-            "threshold": -3.0
+            "threshold": -6.0
         },
         "plugins_order": [
             "compressor",
