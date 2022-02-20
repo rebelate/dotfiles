@@ -5,8 +5,8 @@
             "input-gain": -1.5,
             "left": {
                 "band0": {
-                    "frequency": 29.952623149688797,
-                    "gain": 0.15695067264574192,
+                    "frequency": 40.0,
+                    "gain": 7.06,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.504760237537245,
@@ -110,8 +110,8 @@
             "output-gain": 0.0,
             "right": {
                 "band0": {
-                    "frequency": 29.952623149688797,
-                    "gain": 0.15695067264574192,
+                    "frequency": 40.0,
+                    "gain": 7.06,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.504760237537245,

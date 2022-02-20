@@ -317,7 +317,7 @@ format-padding = 1
 ;format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #4bffdc
-label = %{T2}%{T-} %gb_used% Used
+label = %{T2}﬙%{T-} %gb_used% Used
 
 [module/wlan]
 type = internal/network
@@ -489,7 +489,7 @@ interval = 3
 ;format-warn = <ramp> <label-warn>
 ;format-warn-underline = ${self.format-underline}
 
-label = " %{T2}﬙%{T-} %temperature-c% "
+label = " %{T2}%{T-} %temperature-c% "
 label-warn = ${self.label}
 label-warn-foreground = ${colors.secondary}
 

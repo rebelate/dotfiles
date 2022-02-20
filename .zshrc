@@ -103,6 +103,7 @@ export QT_IM_MODULE=ibus
 # TORCH
 # tch-rs
 export LIBTORCH="/opt/libtorch"
+export LD_LIBRARY_PATH=/opt/libtorch/lib:$LD_LIBRARY_PATH
 # cmake
 export Python3_ROOT_DIR="/mnt/data1/conda"
 export Torch_DIR="/opt/libtorch/share/cmake/Torch"

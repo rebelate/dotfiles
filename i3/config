@@ -91,7 +91,7 @@ bindsym $mod+Shift+Return exec --no-startup-id alacritty --class floating
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+r exec --no-startup-id "rofi -modi drun,run,window,ssh -show drun -theme nord"
+bindsym $mod+r exec --no-startup-id "rofi -modi drun -show drun -theme nord"
 # dunst
 bindsym control+space exec --no-startup-id "dunstctl close-all"
 
