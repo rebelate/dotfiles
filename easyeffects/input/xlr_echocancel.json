@@ -32,7 +32,7 @@
                 },
                 "band1": {
                     "frequency": 59.763340205038524,
-                    "gain": 3.55,
+                    "gain": 5.95,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.5047602375372453,
@@ -42,7 +42,7 @@
                 },
                 "band2": {
                     "frequency": 119.24354052777788,
-                    "gain": -2.8,
+                    "gain": 2.15,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.504760237537245,
@@ -52,7 +52,7 @@
                 },
                 "band3": {
                     "frequency": 237.92214271853953,
-                    "gain": -10.01,
+                    "gain": -5.8,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.504760237537245,
@@ -62,7 +62,7 @@
                 },
                 "band4": {
                     "frequency": 474.71708526294935,
-                    "gain": -10.31,
+                    "gain": -9.55,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.5047602375372453,
@@ -72,7 +72,7 @@
                 },
                 "band5": {
                     "frequency": 947.1851104970312,
-                    "gain": -11.82,
+                    "gain": -9.55,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.504760237537245,
@@ -102,7 +102,7 @@
                 },
                 "band8": {
                     "frequency": 7523.758767782307,
-                    "gain": 0.1,
+                    "gain": -2.35,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.5047602375372453,
@@ -137,7 +137,7 @@
                 },
                 "band1": {
                     "frequency": 59.763340205038524,
-                    "gain": 3.55,
+                    "gain": 5.95,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.5047602375372453,
@@ -147,7 +147,7 @@
                 },
                 "band2": {
                     "frequency": 119.24354052777788,
-                    "gain": -2.8,
+                    "gain": 2.15,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.504760237537245,
@@ -157,7 +157,7 @@
                 },
                 "band3": {
                     "frequency": 237.92214271853953,
-                    "gain": -10.01,
+                    "gain": -5.8,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.504760237537245,
@@ -167,7 +167,7 @@
                 },
                 "band4": {
                     "frequency": 474.71708526294935,
-                    "gain": -10.31,
+                    "gain": -9.55,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.5047602375372453,
@@ -177,7 +177,7 @@
                 },
                 "band5": {
                     "frequency": 947.1851104970312,
-                    "gain": -11.82,
+                    "gain": -9.55,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.504760237537245,
@@ -207,7 +207,7 @@
                 },
                 "band8": {
                     "frequency": 7523.758767782307,
-                    "gain": 0.1,
+                    "gain": -2.35,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.5047602375372453,
@@ -250,28 +250,7 @@
         "plugins_order": [
             "equalizer",
             "limiter",
-            "deesser",
-            "stereo_tools"
-        ],
-        "stereo_tools": {
-            "balance-in": 0.0,
-            "balance-out": 0.0,
-            "delay": 0.0,
-            "input-gain": 0.0,
-            "middle-level": 0.0,
-            "middle-panorama": 0.0,
-            "mode": "LR > LL (Mono Left Channel)",
-            "mutel": false,
-            "muter": false,
-            "output-gain": 0.0,
-            "phasel": false,
-            "phaser": false,
-            "sc-level": 1.0,
-            "side-balance": 0.0,
-            "side-level": 0.0,
-            "softclip": false,
-            "stereo-base": 0.0,
-            "stereo-phase": 0.0
-        }
+            "deesser"
+        ]
     }
 }
