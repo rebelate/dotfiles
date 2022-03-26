@@ -107,7 +107,7 @@
             },
             "mode": "IIR",
             "num-bands": 10,
-            "output-gain": 0.0,
+            "output-gain": 6.0,
             "right": {
                 "band0": {
                     "frequency": 40.0,

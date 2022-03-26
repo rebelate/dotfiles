@@ -103,10 +103,10 @@ export QT_IM_MODULE=ibus
 # TORCH
 # tch-rs
 export LIBTORCH="/opt/libtorch"
-export LD_LIBRARY_PATH=/opt/libtorch/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$LIBTORCH/lib:$LD_LIBRARY_PATH
 # cmake
 export Python3_ROOT_DIR="/mnt/data1/conda"
-export Torch_DIR="/opt/libtorch/share/cmake/Torch"
+export Torch_DIR="$LIBTORCH/share/cmake/Torch"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -131,19 +131,15 @@ export Torch_DIR="/opt/libtorch/share/cmake/Torch"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
 alias loopbon='pactl load-module module-loopback latency_msec=200'
 alias loopboff='pactl unload-module module-loopback'
 alias uptime='uptime -p'
 alias free='free -h'
 alias vim='nvim'
-alias nvim-init='vim /home/arsil/.config/nvim/init.lua'
 alias lt='ls -laht'
 alias cat='bat'
 alias flip='ffmpeg -f v4l2 -i /dev/video1 -vf "hflip,format=yuv420p" -f v4l2 /dev/video0 >& /dev/null'
-alias assist='/home/arsil/assistance/bin/assistance'
 alias pipewire-restart='systemctl --user restart pipewire pipewire-pulse && systemctl --user daemon-reload'
-
 function pdf-compress() {
   gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$2" "$1"
 }

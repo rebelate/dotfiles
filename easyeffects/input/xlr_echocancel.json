@@ -123,7 +123,7 @@
             },
             "mode": "IIR",
             "num-bands": 10,
-            "output-gain": 0.0,
+            "output-gain": 18.6,
             "right": {
                 "band0": {
                     "frequency": 29.952623149688797,
@@ -250,7 +250,28 @@
         "plugins_order": [
             "equalizer",
             "limiter",
-            "deesser"
-        ]
+            "deesser",
+            "stereo_tools"
+        ],
+        "stereo_tools": {
+            "balance-in": 0.0,
+            "balance-out": 0.0,
+            "delay": 0.0,
+            "input-gain": 0.0,
+            "middle-level": 0.0,
+            "middle-panorama": 0.0,
+            "mode": "LR > LL (Mono Left Channel)",
+            "mutel": false,
+            "muter": false,
+            "output-gain": 0.0,
+            "phasel": false,
+            "phaser": false,
+            "sc-level": 1.0,
+            "side-balance": 0.0,
+            "side-level": 0.0,
+            "softclip": false,
+            "stereo-base": 0.0,
+            "stereo-phase": 0.0
+        }
     }
 }

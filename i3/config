@@ -93,7 +93,7 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 bindsym $mod+r exec --no-startup-id "rofi -modi drun -show drun -theme nord"
 # dunst
-bindsym control+space exec --no-startup-id "dunstctl close-all"
+bindsym control+$mod+space exec --no-startup-id "dunstctl close-all"
 
 bindsym Mod1+Tab workspace back_and_forth
 # There also is the (new) i3-dmenu-desktop which only displays applications
