@@ -8,7 +8,7 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
-exec --no-startup-id xrandr --output HDMI-A-0 --mode 1280x1024 -r 60.02
+exec --no-startup-id xrandr --output HDMI-A-0 --mode 1920x1080 -r 60.02
 exec --no-startup-id /usr/libexec/gsd-xsettings
 exec --no-startup-id xset r rate 450
 # Fix a bug in gnome-settings-daemon: http://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
@@ -93,7 +93,7 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 bindsym $mod+r exec --no-startup-id "rofi -modi drun -show drun -theme nord"
 # dunst
-bindsym control+$mod+space exec --no-startup-id "dunstctl close-all"
+bindsym $mod+control+space exec --no-startup-id "dunstctl close-all"
 
 bindsym Mod1+Tab workspace back_and_forth
 # There also is the (new) i3-dmenu-desktop which only displays applications
